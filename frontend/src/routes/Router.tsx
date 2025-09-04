@@ -4,9 +4,6 @@ import  { lazy } from 'react';
 import { Navigate, createBrowserRouter } from "react-router";
 import Loadable from 'src/layouts/full/shared/loadable/Loadable';
 
-
-
-
 /* ***Layouts**** */
 const FullLayout = Loadable(lazy(() => import('../layouts/full/FullLayout')));
 const BlankLayout = Loadable(lazy(() => import('../layouts/blank/BlankLayout')));
@@ -15,7 +12,7 @@ const BlankLayout = Loadable(lazy(() => import('../layouts/blank/BlankLayout')))
 const Dashboard = Loadable(lazy(() => import('../views/dashboards/Dashboard')));
 
 // utilities
-const Typography = Loadable(lazy(() => import("../views/typography/Typography")));
+const RendezVous = Loadable(lazy(() => import("../views/rendez_vous/Rendez_vous")));
 const Patient = Loadable(lazy(() => import("../views/tables/Table")));
 const Form = Loadable(lazy(() => import("../views/forms/Form")));
 const Alert = Loadable(lazy(() => import("../views/alerts/Alerts")));
@@ -35,7 +32,7 @@ const Router = [
     element: <FullLayout />,
     children: [
       { path: '/', exact: true, element: <Dashboard/> },
-      { path: '/ui/typography', exact: true, element: <Typography/> },
+      { path: '/ui/rendez_Vous', exact: true, element: <RendezVous/> },
       { path: '/ui/patient', exact: true, element: <Patient/> },
       { path: '/ui/form', exact: true, element: <Form/> },
       { path: '/ui/alert', exact: true, element: <Alert/> },

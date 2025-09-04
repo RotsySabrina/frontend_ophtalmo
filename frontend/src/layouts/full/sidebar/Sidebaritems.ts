@@ -45,7 +45,7 @@ const SidebarContent: MenuItem[] = [
         name: "Rendez-vous",
         icon: "solar:text-circle-outline",
         id: uniqueId(),
-        url: "/ui/typography",
+        url: "/ui/rendez_Vous",
         isPro: false,
       },
       {
