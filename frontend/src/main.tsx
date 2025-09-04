@@ -1,10 +1,13 @@
-import { StrictMode } from 'react'
+import { Suspense } from 'react'
 import { createRoot } from 'react-dom/client'
-import './index.css'
+import './css/globals.css'
 import App from './App.tsx'
+import Spinner from './views/spinner/Spinner.tsx'
+
 
 createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
+<Suspense fallback={<Spinner />}>
+        <App />
+    </Suspense>
+    ,
 )

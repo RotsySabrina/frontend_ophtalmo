@@ -1,22 +1,18 @@
-import { useEffect, useState } from "react";
-import { getRoles } from "./api";
+import { RouterProvider } from "react-router";
+import { Flowbite, ThemeModeScript } from 'flowbite-react';
+import customTheme from './utils/theme/custom-theme';
+import router from "./routes/Router";
+
 
 function App() {
-  const [roles, setRoles] = useState([]);
-
-  useEffect(() => {
-    getRoles().then(setRoles);
-  }, []);
 
   return (
-    <div className="p-4">
-      <h1 className="text-2xl font-bold">Liste des roles</h1>
-      <ul>
-        {roles.map((p) => (
-          <li key={p.id}>{p.titre}</li>
-        ))}
-      </ul>
-    </div>
+    <>
+      <ThemeModeScript />
+      <Flowbite theme={{ theme: customTheme }}>
+      <RouterProvider router={router} />
+      </Flowbite>
+    </>
   );
 }
 
