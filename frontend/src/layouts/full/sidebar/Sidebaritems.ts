@@ -35,6 +35,13 @@ const SidebarContent: MenuItem[] = [
         isPro: false,
       },
       {
+        name: "Statistique",
+        icon: "solar:widget-add-line-duotone",
+        id: uniqueId(),
+        url: "/ui/stats",
+        isPro: false,
+      },
+      {
         name: "Patient",
         icon: "solar:bedside-table-3-linear",
         id: uniqueId(),

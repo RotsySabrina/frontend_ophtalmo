@@ -14,6 +14,7 @@ const Dashboard = Loadable(lazy(() => import('../views/dashboards/Dashboard')));
 // utilities
 const RendezVous = Loadable(lazy(() => import("../views/rendez_vous/Rendez_vous")));
 const Patient = Loadable(lazy(() => import("../views/tables/Table")));
+const Stats = Loadable(lazy(() => import("../views/stats/Stats")));
 const Form = Loadable(lazy(() => import("../views/forms/Form")));
 const Alert = Loadable(lazy(() => import("../views/alerts/Alerts")));
 
@@ -32,6 +33,7 @@ const Router = [
     element: <FullLayout />,
     children: [
       { path: '/', exact: true, element: <Dashboard/> },
+      { path: '/ui/stats', exact: true, element: <Stats/> },
       { path: '/ui/rendez_Vous', exact: true, element: <RendezVous/> },
       { path: '/ui/patient', exact: true, element: <Patient/> },
       { path: '/ui/form', exact: true, element: <Form/> },

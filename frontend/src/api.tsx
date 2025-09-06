@@ -18,3 +18,31 @@ export const getRendezVous = async () => {
   const response = await API.get("/rendez_vous");
   return response.data;
 };
+
+export const fetchTotalRdv = async (startDate: string, endDate: string) => {
+  const res = await API.get("/stats/total", {
+    params: { startDate, endDate },
+  });
+  return res.data;
+};
+
+export const fetchRdvParStatut = async (startDate: string, endDate: string) => {
+  const res = await API.get("/stats/statut", {
+    params: { startDate, endDate },
+  });
+  return res.data;
+};
+
+export const fetchRdvEvolution = async (start: string, end: string, interval: string) => {
+  const res = await API.get("/stats/evolution", {
+    params: { start, end, interval }
+  });
+  return res.data;
+};
+
+export const fetchRdvParMedecin = async (start: string, end: string) => {
+  const res = await API.get("/stats/medecin", {
+    params: { start, end}
+  });
+  return res.data;
+};
