@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from "react";
-import {  Button, Navbar } from "flowbite-react";
+import { Button, Navbar } from "flowbite-react";
 import { Icon } from "@iconify/react";
 import Profile from "./Profile";
 import Notification from "./notification";
@@ -35,8 +35,8 @@ const Header = () => {
     <>
       <header
         className={`sticky top-0 z-[5] ${isSticky
-            ? "bg-lightgray dark:bg-dark fixed w-full"
-            : "bg-lightgray dark:bg-dark"
+          ? "bg-lightgray dark:bg-dark fixed w-full"
+          : "bg-lightgray dark:bg-dark"
           }`}
       >
         <Navbar
@@ -57,9 +57,6 @@ const Header = () => {
             </div>
 
             <div className="flex gap-4 items-center">
-              <Button as={Link} to="https://www.wrappixel.com/templates/category/react-templates/?ref=376#demos" target="_blank" size={'sm'} color={"primary"} className="rounded-full py-1 px-3 font-medium">
-                Check Pro Template
-              </Button>
               <Profile />
             </div>
           </div>

@@ -94,7 +94,7 @@ const Stats = () => {
           {/* Filtres dates */}
           <div className="flex gap-4 items-center mb-6">
             <label className="flex items-center gap-2 text-sm font-medium text-gray-700">
-              Début :
+              Date début :
               <input
                 type="date"
                 value={startDate}
@@ -103,7 +103,7 @@ const Stats = () => {
               />
             </label>
             <label className="flex items-center gap-2 text-sm font-medium text-gray-700">
-              Fin :
+              Date fin :
               <input
                 type="date"
                 value={endDate}
@@ -135,13 +135,13 @@ const Stats = () => {
         <div className="flex flex flex-col gap-6">
           {/* Total */}
           <div className="bg-white shadow p-6 rounded-xl">
-            <h2 className="text-xl font-bold mb-2">Total RDV</h2>
+            <h2 className="text-xl font-bold mb-2">Total des rendez-vous</h2>
             <p className="text-4xl font-semibold text-gray-800">{total}</p>
           </div>
 
           {/* Tableau des RDV confirmés */}
           <div className="bg-white shadow p-6 rounded-xl">
-            <h2 className="text-xl font-bold mb-2">RDV confirmés par médecin</h2>
+            <h2 className="text-xl font-bold mb-2">Rendez-vous confirmés par le médecin</h2>
             {/* Tableau */}
             <table className="min-w-full divide-y divide-gray-200">
               <thead className="bg-gray-50">
@@ -150,7 +150,7 @@ const Stats = () => {
                     Médecin
                   </th>
                   <th className="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                    Total RDV
+                    Total Rendez-vous
                   </th>
                 </tr>
               </thead>
@@ -158,7 +158,7 @@ const Stats = () => {
                 {dataM.length === 0 ? (
                   <tr>
                     <td colSpan={2} className="px-6 py-4 whitespace-nowrap text-center text-sm text-gray-500">
-                      Aucun RDV trouvé
+                      Aucun Rendez-vous trouvé
                     </td>
                   </tr>
                 ) : (
@@ -185,7 +185,7 @@ const Stats = () => {
       {/* Filtres */}
       <div className="flex gap-4 mb-4">
         <label className="flex items-center gap-2 text-sm font-medium text-gray-700">
-          Début :
+          Date début :
         <input
           type="date"
           value={startDate}
@@ -194,7 +194,7 @@ const Stats = () => {
         />
         </label>
         <label className="flex items-center gap-2 text-sm font-medium text-gray-700">
-          Fin :
+          Date fin :
         <input
           type="date"
           value={end}

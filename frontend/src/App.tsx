@@ -10,7 +10,7 @@ function App() {
     <>
       <ThemeModeScript />
       <Flowbite theme={{ theme: customTheme }}>
-      <RouterProvider router={router} />
+        <RouterProvider router={router} />
       </Flowbite>
     </>
   );

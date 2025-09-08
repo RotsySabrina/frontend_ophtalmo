@@ -46,3 +46,21 @@ export const fetchRdvParMedecin = async (start: string, end: string) => {
   });
   return res.data;
 };
+
+export const login = async (email: string, password: string) => {
+  const res = await API.post("/auth/login", {
+    email,
+    mot_de_passe: password,
+  });
+  return res.data; // { token, user }
+};
+
+export const logout = () => {
+  localStorage.removeItem("token"); // supprime le JWT
+  localStorage.removeItem("user");  // si tu stockes aussi l’utilisateur
+};
+
+// 🔹 Vérifier si connecté
+export const isAuthenticated = () => {
+  return !!localStorage.getItem("token");
+};

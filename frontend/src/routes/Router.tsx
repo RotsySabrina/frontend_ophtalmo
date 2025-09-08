@@ -1,6 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-import  { lazy } from 'react';
+import { lazy } from 'react';
 import { Navigate, createBrowserRouter } from "react-router";
 import Loadable from 'src/layouts/full/shared/loadable/Loadable';
 
@@ -26,18 +26,20 @@ const Login = Loadable(lazy(() => import('../views/auth/login/Login')));
 const Register = Loadable(lazy(() => import('../views/auth/register/Register')));
 const SamplePage = Loadable(lazy(() => import('../views/sample-page/SamplePage')));
 const Error = Loadable(lazy(() => import('../views/auth/error/Error')));
+const Acueil = Loadable(lazy(() => import('../views/accueil/Accueil') ));
 
 const Router = [
   {
     path: '/',
     element: <FullLayout />,
     children: [
-      { path: '/', exact: true, element: <Dashboard/> },
-      { path: '/ui/stats', exact: true, element: <Stats/> },
-      { path: '/ui/rendez_Vous', exact: true, element: <RendezVous/> },
-      { path: '/ui/patient', exact: true, element: <Patient/> },
-      { path: '/ui/form', exact: true, element: <Form/> },
-      { path: '/ui/alert', exact: true, element: <Alert/> },
+      { path: '/', exact: true, element: <Navigate to="/connexion" />  },
+      { path: '/ui/accueil', exact: true, element: <Acueil /> },
+      { path: '/ui/stats', exact: true, element: <Stats /> },
+      { path: '/ui/rendez_Vous', exact: true, element: <RendezVous /> },
+      { path: '/ui/patient', exact: true, element: <Patient /> },
+      { path: '/ui/form', exact: true, element: <Form /> },
+      { path: '/ui/alert', exact: true, element: <Alert /> },
       { path: '/icons/solar', exact: true, element: <Solar /> },
       { path: '/sample-page', exact: true, element: <SamplePage /> },
       { path: '*', element: <Navigate to="/auth/404" /> },
@@ -47,7 +49,7 @@ const Router = [
     path: '/',
     element: <BlankLayout />,
     children: [
-      { path: '/auth/login', element: <Login /> },
+      { path: '/connexion', element: <Login /> },
       { path: '/auth/register', element: <Register /> },
       { path: '404', element: <Error /> },
       { path: '/auth/404', element: <Error /> },

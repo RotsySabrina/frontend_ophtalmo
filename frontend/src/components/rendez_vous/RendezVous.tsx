@@ -30,19 +30,31 @@ const RendezVous = () => {
       listtitle: "Delete",
     },
   ];
+  const formatDateTimeLong = (dateString: string) => {
+    return new Intl.DateTimeFormat("fr-FR", {
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+    }).format(new Date(dateString));
+  };
+
 
   return (
     <>
       <div className="rounded-xl dark:shadow-dark-md shadow-md bg-white dark:bg-darkgray p-6  relative w-full break-words">
-        <h5 className="card-title">Liste Patients</h5>
+        <h5 className="card-title">Liste des rendez-vous</h5>
         <div className="mt-3">
 
           <div className="overflow-x-auto">
             <Table hoverable>
               <Table.Head>
                 <Table.HeadCell className="p-6">ID</Table.HeadCell>
-                <Table.HeadCell>Id Patient</Table.HeadCell>
-                <Table.HeadCell>Id Médecin</Table.HeadCell>
+                <Table.HeadCell>Patient</Table.HeadCell>
+                <Table.HeadCell>Médecin</Table.HeadCell>
                 <Table.HeadCell>Date et heure</Table.HeadCell>
                 <Table.HeadCell>Status</Table.HeadCell>
                 <Table.HeadCell></Table.HeadCell>
@@ -60,23 +72,21 @@ const RendezVous = () => {
                     <Table.Cell className="whitespace-nowrap ps-6">
                       <div className="flex gap-3 items-center">
                         <div className="truncat line-clamp-2 sm:text-wrap max-w-56">
-                          <h6 className="text-sm">{rdv.id_patient}</h6>
+                          <h6 className="text-sm">{rdv.patient_nom} {rdv.patient_prenom}</h6>
                         </div>
                       </div>
                     </Table.Cell>
                     <Table.Cell className="whitespace-nowrap ps-6">
                       <div className="flex gap-3 items-center">
                         <div className="truncat line-clamp-2 sm:text-wrap max-w-56">
-                          <h6 className="text-sm">{rdv.id_medecine}</h6>
+                          <h6 className="text-sm">{rdv.medecin_nom} {rdv.medecin_prenom}</h6>
                         </div>
                       </div>
                     </Table.Cell>
                     <Table.Cell className="whitespace-nowrap ps-6">
                       <div className="flex gap-3 items-center">
                         <div className="truncate line-clamp-2 sm:text-wrap max-w-56">
-                          <h6 className="text-sm">{rdv.date_heure}
-
-                          </h6>
+                          <h6 className="text-sm">{formatDateTimeLong(rdv.date_heure)}</h6>
                         </div>
                       </div>
                     </Table.Cell>

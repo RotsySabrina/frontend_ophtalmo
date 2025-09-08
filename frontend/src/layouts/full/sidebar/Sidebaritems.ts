@@ -28,10 +28,10 @@ const SidebarContent: MenuItem[] = [
     // heading: "Utilities",
     children: [
       {
-        name: "Dashboard",
+        name: "Accueil",
         icon: "solar:widget-add-line-duotone",
         id: uniqueId(),
-        url: "/",
+        url: "/ui/accueil",
         isPro: false,
       },
       {
@@ -71,26 +71,26 @@ const SidebarContent: MenuItem[] = [
       },
     ],
   },
-  {
-    heading: "Auth",
-    children: [
-      {
-        name: "Login",
-        icon: "solar:login-2-linear",
-        id: uniqueId(),
-        url: "/auth/login",
-        isPro: false,
+  // {
+  //   heading: "Auth",
+  //   children: [
+  //     {
+  //       name: "Login",
+  //       icon: "solar:login-2-linear",
+  //       id: uniqueId(),
+  //       url: "/auth/login",
+  //       isPro: false,
 
-      },
-      {
-        name: "Register",
-        icon: "solar:shield-user-outline",
-        id: uniqueId(),
-        url: "/auth/register",
-        isPro: false,
-      },
-    ],
-  },
+  //     },
+  //     {
+  //       name: "Register",
+  //       icon: "solar:shield-user-outline",
+  //       id: uniqueId(),
+  //       url: "/auth/register",
+  //       isPro: false,
+  //     },
+  //   ],
+  // },
 ];
 
 export default SidebarContent;

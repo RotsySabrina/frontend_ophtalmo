@@ -1,5 +1,5 @@
 
-import {  Sidebar } from "flowbite-react";
+import { Sidebar } from "flowbite-react";
 import SidebarContent from "./Sidebaritems";
 import NavItems from "./NavItems";
 import SimpleBar from "simplebar-react";
@@ -9,12 +9,11 @@ import NavCollapse from "./NavCollapse";
 
 const SidebarLayout = () => {
 
-
   return (
     <>
       <div className="xl:block hidden">
         <Sidebar
-          className="fixed menu-sidebar  bg-white dark:bg-darkgray rtl:pe-4 rtl:ps-0 top-[72px]"
+          className="fixed menu-sidebar bg-white dark:bg-darkgray rtl:pe-4 rtl:ps-0 top-0 h-screen"
           aria-label="Sidebar with multi-level dropdown example"
         >
           <div className="px-6 py-4 flex items-center sidebarlogo">
@@ -31,16 +30,16 @@ const SidebarLayout = () => {
                           {item.heading}
                         </h5>
                         {item.children?.map((child, index) => (
-                        <React.Fragment key={child.id && index}>
-                          {child.children ? (
-                            <div className="collpase-items">
-                              <NavCollapse item={child} />
-                            </div>
-                          ) : (
-                            <NavItems item={child} />
-                          )}
-                        </React.Fragment>
-                      ))}
+                          <React.Fragment key={child.id && index}>
+                            {child.children ? (
+                              <div className="collpase-items">
+                                <NavCollapse item={child} />
+                              </div>
+                            ) : (
+                              <NavItems item={child} />
+                            )}
+                          </React.Fragment>
+                        ))}
                       </React.Fragment>
                     </div>
                   ))}
