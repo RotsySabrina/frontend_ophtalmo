@@ -29,28 +29,28 @@ const SidebarContent: MenuItem[] = [
     children: [
       {
         name: "Accueil",
-        icon: "solar:widget-add-line-duotone",
+        icon: "solar:home-2-outline",
         id: uniqueId(),
         url: "/ui/accueil",
         isPro: false,
       },
       {
         name: "Statistique",
-        icon: "solar:widget-add-line-duotone",
+        icon: "solar:chart-square-outline",
         id: uniqueId(),
         url: "/ui/stats",
         isPro: false,
       },
       {
         name: "Patient",
-        icon: "solar:bedside-table-3-linear",
+        icon: "solar:user-heart-outline",
         id: uniqueId(),
         url: "/ui/patient",
         isPro: false,
       },
       {
         name: "Rendez-vous",
-        icon: "solar:text-circle-outline",
+        icon: "solar:calendar-outline",
         id: uniqueId(),
         url: "/ui/rendez_Vous",
         isPro: false,
