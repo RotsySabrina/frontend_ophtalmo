@@ -41,56 +41,36 @@ const SidebarContent: MenuItem[] = [
         url: "/ui/stats",
         isPro: false,
       },
-      {
-        name: "Patient",
-        icon: "solar:user-heart-outline",
-        id: uniqueId(),
-        url: "/ui/patient",
-        isPro: false,
-      },
-      {
-        name: "Rendez-vous",
-        icon: "solar:calendar-outline",
-        id: uniqueId(),
-        url: "/ui/rendez_Vous",
-        isPro: false,
-      },
-      {
-        name: "Form",
-        icon: "solar:password-minimalistic-outline",
-        id: uniqueId(),
-        url: "/ui/form",
-        isPro: false,
-      },
-      {
-        name: "Alert",
-        icon: "solar:airbuds-case-charge-outline",
-        id: uniqueId(),
-        url: "/ui/alert",
-        isPro: false,
-      },
+      // {
+      //   name: "Patient",
+      //   icon: "solar:user-heart-outline",
+      //   id: uniqueId(),
+      //   url: "/ui/patient",
+      //   isPro: false,
+      // },
+      // {
+      //   name: "Rendez-vous",
+      //   icon: "solar:calendar-outline",
+      //   id: uniqueId(),
+      //   url: "/ui/rendez_Vous",
+      //   isPro: false,
+      // },
+      // {
+      //   name: "Form",
+      //   icon: "solar:password-minimalistic-outline",
+      //   id: uniqueId(),
+      //   url: "/ui/form",
+      //   isPro: false,
+      // },
+      // {
+      //   name: "Alert",
+      //   icon: "solar:airbuds-case-charge-outline",
+      //   id: uniqueId(),
+      //   url: "/ui/alert",
+      //   isPro: false,
+      // },
     ],
   },
-  // {
-  //   heading: "Auth",
-  //   children: [
-  //     {
-  //       name: "Login",
-  //       icon: "solar:login-2-linear",
-  //       id: uniqueId(),
-  //       url: "/auth/login",
-  //       isPro: false,
-
-  //     },
-  //     {
-  //       name: "Register",
-  //       icon: "solar:shield-user-outline",
-  //       id: uniqueId(),
-  //       url: "/auth/register",
-  //       isPro: false,
-  //     },
-  //   ],
-  // },
 ];
 
 export default SidebarContent;
